@@ -23,3 +23,41 @@ or we can say that it is then removed from (git add . files )  now we can see it
 git remote add origin 
 git remote -v  ( (fetch) and (push) <two>  )
 
+git branch <NewBranchName>
+git checkout <NewBranchName>  <--- After this the HEAD will come on the <NewBranchName>
+/**************/
+FOCUS 
+This is interesting 
+See i u want to do some contribution to someone project first u fork the project then do git clone all that jazz and the url from which u have forked the repo (THE ORIGINAL REPO URL)
+will be the upstream URL by convention to add this to u cloned project do---> [git remote add upstream <ORIGINAL URL>]  u can see the changes by git remote -v
+
+[UPSTREAM]= URL from where u have forked the project 
+
+After the chages have been made do something 
+
+One branch == One pull req ---> IF a branch already have a open pull req and u again push code to that branch it will not create a new branch it will just inc the nos. of commits 
+So thats why it is said that one branch is equal to one pull req .. JUST MAKE DIFF branch for diff features(pull req).
+
+
+If u want to remove a commit . DO git reset the ID of the commit u want to go and in git status we can see the changes now u can stash the extra changes and do git stash clear to remove the changes or can keep it in the stash area and 
+do git push orgin <NewBranchName> -f [-f because online repo has a commit that my repo and commits are interlinked so we have to do forcefully]
+
+
+[ TO MAKE YOUR LOCAL PROJECT IN SYNC IN WITH THE MAIN PROJECT ]
+/*********************/
+• git fetch --all --prune 
+• git reset --hard upstream/main
+        OR
+• git pull upstream main [ also do same as the above 2 commands ]
+
+git push origin main 
+
+/*********************/
+
+HOW TO MERGE MULTIPLE COMMITS IN A SINGLE COMMIT 
+
+git rebase -i the id of the commit above which to want to merge the commits
+
+
+TO DELETE A PUSHED COMMIT first reset to the id of the commit u want to go then do 
+[git add . git commit -m "<message>" then most important git push origin <NewBranchName> --force]
