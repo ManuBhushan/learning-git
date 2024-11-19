@@ -18,3 +18,8 @@ git stash clear
 
 After (git add .) the code changes go to staged area and u can see the changes through git add . and then we can do git restore --staged <fileName> to remove it from (add .)
 or we can say that it is then removed from (git add . files )  now we can see it in git status and from their we can also restore the filechanges back
+
+
+git remote add origin 
+git remote -v  ( (fetch) and (push) <two>  )
+
