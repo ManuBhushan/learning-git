@@ -1,0 +1,20 @@
+
+
+git status
+
+git add . 
+
+git commit -m "Message"
+
+git log
+
+git reset  (the code of the previous commit u want ot go back get code from git log)
+
+git stash 
+
+git stash pop
+
+git stash clear
+
+After (git add .) the code changes go to staged area and u can see the changes through git add . and then we can do git restore --staged <fileName> to remove it from (add .)
+or we can say that it is then removed from (git add . files )  now we can see it in git status and from their we can also restore the filechanges back
